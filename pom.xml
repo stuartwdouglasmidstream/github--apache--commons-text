@@ -117,7 +117,7 @@
     <commons.release.version>1.12.0</commons.release.version>
     <commons.bc.version>1.11.0</commons.bc.version>
     <commons.site.path>text</commons.site.path>
-    <graalvm.version>22.0.0.2</graalvm.version>
+    <graalvm.version>23.0.4</graalvm.version>
     <commons.jira.id>TEXT</commons.jira.id>
     <commons.scmPubCheckoutDirectory>site-content</commons.scmPubCheckoutDirectory>
     <commons.jacoco.methodRatio>0.98</commons.jacoco.methodRatio>
