@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
- Licensed to the Apache Software Foundation (ASF) under one or more
- contributor license agreements.  See the NOTICE file distributed with
- this work for additional information regarding copyright ownership.
- The ASF licenses this file to You under the Apache License, Version 2.0
- (the "License"); you may not use this file except in compliance with
- the License.  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.apache.commons</groupId>
@@ -26,86 +11,159 @@
   <version>1.12.0</version>
   <name>Apache Commons Text</name>
   <description>Apache Commons Text is a set of utility functions and reusable components for the purpose of processing
-    and manipulating text that should be of use in a Java environment.
-  </description>
+    and manipulating text that should be of use in a Java environment.</description>
   <url>https://commons.apache.org/proper/commons-text</url>
-
+  <inceptionYear>2014</inceptionYear>
+  <developers>
+    <developer>
+      <id>kinow</id>
+      <name>Bruno P. Kinoshita</name>
+      <email>kinow@apache.org</email>
+    </developer>
+    <developer>
+      <id>britter</id>
+      <name>Benedikt Ritter</name>
+      <email>britter@apache.org</email>
+    </developer>
+    <developer>
+      <id>chtompki</id>
+      <name>Rob Tompkins</name>
+      <email>chtompki@apache.org</email>
+    </developer>
+    <developer>
+      <id>ggregory</id>
+      <name>Gary Gregory</name>
+      <email>ggregory at apache.org</email>
+      <url>https://www.garygregory.com</url>
+      <organization>The Apache Software Foundation</organization>
+      <organizationUrl>https://www.apache.org/</organizationUrl>
+      <roles>
+        <role>PMC Member</role>
+      </roles>
+      <timezone>America/New_York</timezone>
+      <properties>
+        <picUrl>https://people.apache.org/~ggregory/img/garydgregory80.png</picUrl>
+      </properties>
+    </developer>
+    <developer>
+      <id>djones</id>
+      <name>Duncan Jones</name>
+      <email>djones@apache.org</email>
+    </developer>
+  </developers>
+  <contributors>
+    <contributor>
+      <name>Don Jeba</name>
+      <email>donjeba@yahoo.com</email>
+    </contributor>
+    <contributor>
+      <name>Sampanna Kahu</name>
+    </contributor>
+    <contributor>
+      <name>Jarek Strzelecki</name>
+    </contributor>
+    <contributor>
+      <name>Lee Adcock</name>
+    </contributor>
+    <contributor>
+      <name>Amey Jadiye</name>
+      <email>ameyjadiye@gmail.com</email>
+    </contributor>
+    <contributor>
+      <name>Arun Vinud S S</name>
+    </contributor>
+    <contributor>
+      <name>Ioannis Sermetziadis</name>
+    </contributor>
+    <contributor>
+      <name>Jostein Tveit</name>
+    </contributor>
+    <contributor>
+      <name>Luciano Medallia</name>
+    </contributor>
+    <contributor>
+      <name>Jan Martin Keil</name>
+    </contributor>
+    <contributor>
+      <name>Nandor Kollar</name>
+    </contributor>
+    <contributor>
+      <name>Nick Wong</name>
+    </contributor>
+    <contributor>
+      <name>Ali Ghanbari</name>
+      <url>https://ali-ghanbari.github.io/</url>
+    </contributor>
+  </contributors>
+  <scm>
+    <connection>scm:git:https://gitbox.apache.org/repos/asf/commons-text</connection>
+    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/commons-text</developerConnection>
+    <url>https://gitbox.apache.org/repos/asf?p=commons-text.git</url>
+  </scm>
+  <issueManagement>
+    <system>jira</system>
+    <url>https://issues.apache.org/jira/browse/TEXT</url>
+  </issueManagement>
+  <distributionManagement>
+    <site>
+      <id>apache.website</id>
+      <name>Apache Commons Site</name>
+      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/commons/content/proper/commons-text/</url>
+    </site>
+  </distributionManagement>
   <properties>
-    <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <project.build.outputTimestamp>2024-04-13T13:15:17Z</project.build.outputTimestamp>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-
-    <commons.componentid>text</commons.componentid>
-    <commons.packageId>text</commons.packageId>
-    <commons.module.name>org.apache.commons.text</commons.module.name>
-
-    <commons.release.version>1.12.0</commons.release.version>
     <commons.release.next>1.12.1</commons.release.next>
-    <commons.release.desc>(Java 8+)</commons.release.desc>
-
-    <commons.jira.id>TEXT</commons.jira.id>
-    <commons.jira.pid>12318221</commons.jira.pid>
-
-    <commons.site.path>text</commons.site.path>
-    <commons.scmPubUrl>https://svn.apache.org/repos/infra/websites/production/commons/content/proper/commons-text</commons.scmPubUrl>
-    <commons.scmPubCheckoutDirectory>site-content</commons.scmPubCheckoutDirectory>
-
-    <commons.bytebuddy.version>1.14.13</commons.bytebuddy.version>
-    <commons.mockito.version>4.11.0</commons.mockito.version>
-
-    <!-- 22.1.0 requires Java 11 -->
-    <graalvm.version>22.0.0.2</graalvm.version>
-    <commons.rng.version>1.5</commons.rng.version>
-
-    <japicmp.skip>false</japicmp.skip>
-
     <jmh.version>1.37</jmh.version>
-
-    <!-- Commons Release Plugin -->
-    <!-- Previous version of the component (used for reporting binary compatibility check)-->
+    <commons.release.version>1.12.0</commons.release.version>
     <commons.bc.version>1.11.0</commons.bc.version>
-    <commons.rc.version>RC1</commons.rc.version>
-    <commons.release.isDistModule>true</commons.release.isDistModule>
-    <commons.distSvnStagingUrl>scm:svn:https://dist.apache.org/repos/dist/dev/commons/${commons.componentid}</commons.distSvnStagingUrl>
-    <!--
-      Define the following in ~/.m2/settings.xml in an active profile:
-      (or provide them on the command line)
-      commons.releaseManagerName
-      commons.releaseManagerKey
-    -->
-    <!-- JaCoCo: Don't make code coverage worse than: -->
-    <commons.jacoco.haltOnFailure>true</commons.jacoco.haltOnFailure>
+    <commons.site.path>text</commons.site.path>
+    <graalvm.version>22.0.0.2</graalvm.version>
+    <commons.jira.id>TEXT</commons.jira.id>
+    <commons.scmPubCheckoutDirectory>site-content</commons.scmPubCheckoutDirectory>
+    <commons.jacoco.methodRatio>0.98</commons.jacoco.methodRatio>
+    <commons.mockito.version>4.11.0</commons.mockito.version>
+    <commons.jacoco.branchRatio>0.95</commons.jacoco.branchRatio>
     <commons.jacoco.classRatio>1.00</commons.jacoco.classRatio>
     <commons.jacoco.instructionRatio>0.97</commons.jacoco.instructionRatio>
-    <commons.jacoco.methodRatio>0.98</commons.jacoco.methodRatio>
-    <commons.jacoco.branchRatio>0.95</commons.jacoco.branchRatio>
+    <commons.componentid>text</commons.componentid>
     <commons.jacoco.complexityRatio>0.94</commons.jacoco.complexityRatio>
-    <commons.jacoco.lineRatio>0.98</commons.jacoco.lineRatio>    
+    <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+    <commons.module.name>org.apache.commons.text</commons.module.name>
+    <commons.jacoco.haltOnFailure>true</commons.jacoco.haltOnFailure>
+    <commons.jacoco.lineRatio>0.98</commons.jacoco.lineRatio>
+    <commons.release.desc>(Java 8+)</commons.release.desc>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <commons.rng.version>1.5</commons.rng.version>
+    <commons.jira.pid>12318221</commons.jira.pid>
+    <commons.distSvnStagingUrl>scm:svn:https://dist.apache.org/repos/dist/dev/commons/${commons.componentid}</commons.distSvnStagingUrl>
+    <commons.bytebuddy.version>1.14.13</commons.bytebuddy.version>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <commons.rc.version>RC1</commons.rc.version>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <commons.scmPubUrl>https://svn.apache.org/repos/infra/websites/production/commons/content/proper/commons-text</commons.scmPubUrl>
+    <japicmp.skip>false</japicmp.skip>
+    <project.build.outputTimestamp>2024-04-13T13:15:17Z</project.build.outputTimestamp>
+    <commons.release.isDistModule>true</commons.release.isDistModule>
+    <commons.packageId>text</commons.packageId>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.14.0</version>
     </dependency>
-    <!-- testing -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <!-- Java 21 support, revisit for Mockito 5 -->
       <groupId>net.bytebuddy</groupId>
       <artifactId>byte-buddy</artifactId>
       <version>${commons.bytebuddy.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <!-- Java 21 support, revisit for Mockito 5 -->
       <groupId>net.bytebuddy</groupId>
       <artifactId>byte-buddy-agent</artifactId>
       <version>${commons.bytebuddy.version}</version>
@@ -125,7 +183,6 @@
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
-      <!--  Use mockito-inline instead of mockito-core to mock and spy on final classes. -->
       <artifactId>mockito-inline</artifactId>
       <version>${commons.mockito.version}</version>
       <scope>test</scope>
@@ -161,24 +218,10 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
     <defaultGoal>clean verify apache-rat:check japicmp:cmp checkstyle:check spotbugs:check javadoc:javadoc</defaultGoal>
     <pluginManagement>
       <plugins>
-        <plugin>
-          <groupId>org.apache.rat</groupId>
-          <artifactId>apache-rat-plugin</artifactId>
-          <configuration>
-            <excludes>
-              <exclude>site-content/**</exclude>
-              <exclude>src/site/resources/download_lang.cgi</exclude>
-              <exclude>src/test/resources/org/apache/commons/text/stringEscapeUtilsTestData.txt</exclude>
-              <exclude>src/test/resources/org/apache/commons/text/lcs-perf-analysis-inputs.csv</exclude>
-              <exclude>src/site/resources/release-notes/RELEASE-NOTES-*.txt</exclude>
-            </excludes>
-          </configuration>
-        </plugin><!-- override skip property of parent pom -->
         <plugin>
           <artifactId>maven-pmd-plugin</artifactId>
           <version>${commons.pmd.version}</version>
@@ -190,7 +233,6 @@
     </pluginManagement>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <systemPropertyVariables>
@@ -228,7 +270,6 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <executions>
           <execution>
@@ -246,7 +287,6 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-scm-publish-plugin</artifactId>
         <configuration>
           <ignorePathsToDelete>
@@ -255,7 +295,6 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <configuration>
           <source>${maven.compiler.source}</source>
@@ -263,11 +302,17 @@
       </plugin>
     </plugins>
   </build>
-
   <reporting>
     <plugins>
       <plugin>
         <artifactId>maven-checkstyle-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>checkstyle</report>
+            </reports>
+          </reportSet>
+        </reportSets>
         <configuration>
           <enableRulesSummary>false</enableRulesSummary>
           <configLocation>src/conf/checkstyle.xml</configLocation>
@@ -277,15 +322,7 @@
           <includeTestSourceDirectory>true</includeTestSourceDirectory>
           <excludes>**/generated/**.java,**/jmh_generated/**.java</excludes>
         </configuration>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>checkstyle</report>
-            </reports>
-          </reportSet>
-        </reportSets>
       </plugin>
-      <!-- Requires setting 'export MAVEN_OPTS="-Xmx512m" ' -->
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
@@ -299,9 +336,6 @@
       </plugin>
       <plugin>
         <artifactId>maven-pmd-plugin</artifactId>
-        <configuration>
-          <targetJdk>${maven.compiler.target}</targetJdk>
-        </configuration>
         <reportSets>
           <reportSet>
             <reports>
@@ -310,6 +344,9 @@
             </reports>
           </reportSet>
         </reportSets>
+        <configuration>
+          <targetJdk>${maven.compiler.target}</targetJdk>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -358,118 +395,12 @@
       </plugin>
     </plugins>
   </reporting>
-
-  <inceptionYear>2014</inceptionYear>
-
-  <developers>
-    <developer>
-      <id>kinow</id>
-      <name>Bruno P. Kinoshita</name>
-      <email>kinow@apache.org</email>
-    </developer>
-    <developer>
-      <id>britter</id>
-      <name>Benedikt Ritter</name>
-      <email>britter@apache.org</email>
-    </developer>
-    <developer>
-      <id>chtompki</id>
-      <name>Rob Tompkins</name>
-      <email>chtompki@apache.org</email>
-    </developer>
-    <developer>
-      <id>ggregory</id>
-      <name>Gary Gregory</name>
-      <email>ggregory at apache.org</email>
-      <url>https://www.garygregory.com</url>
-      <organization>The Apache Software Foundation</organization>
-      <organizationUrl>https://www.apache.org/</organizationUrl>
-      <roles>
-        <role>PMC Member</role>
-      </roles>
-      <timezone>America/New_York</timezone>
-      <properties>
-        <picUrl>https://people.apache.org/~ggregory/img/garydgregory80.png</picUrl>
-      </properties>
-    </developer>
-    <developer>
-      <id>djones</id>
-      <name>Duncan Jones</name>
-      <email>djones@apache.org</email>
-    </developer>
-  </developers>
-
-  <contributors>
-    <contributor>
-      <name>Don Jeba</name>
-      <email>donjeba@yahoo.com</email>
-    </contributor>
-    <contributor>
-      <name>Sampanna Kahu</name>
-    </contributor>
-    <contributor>
-      <name>Jarek Strzelecki</name>
-    </contributor>
-    <contributor>
-      <name>Lee Adcock</name>
-    </contributor>
-    <contributor>
-      <name>Amey Jadiye</name>
-      <email>ameyjadiye@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Arun Vinud S S</name>
-    </contributor>
-    <contributor>
-      <name>Ioannis Sermetziadis</name>
-    </contributor>
-    <contributor>
-      <name>Jostein Tveit</name>
-    </contributor>
-    <contributor>
-      <name>Luciano Medallia</name>
-    </contributor>
-    <contributor>
-      <name>Jan Martin Keil</name>
-    </contributor>
-    <contributor>
-      <name>Nandor Kollar</name>
-    </contributor>
-    <contributor>
-      <name>Nick Wong</name>
-    </contributor>
-    <contributor>
-      <name>Ali Ghanbari</name>
-      <url>https://ali-ghanbari.github.io/</url>
-    </contributor>
-  </contributors>
-
-  <scm>
-    <connection>scm:git:https://gitbox.apache.org/repos/asf/commons-text</connection>
-    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/commons-text</developerConnection>
-    <url>https://gitbox.apache.org/repos/asf?p=commons-text.git</url>
-  </scm>
-
-  <issueManagement>
-    <system>jira</system>
-    <url>https://issues.apache.org/jira/browse/TEXT</url>
-  </issueManagement>
-
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <name>Apache Commons Site</name>
-      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/commons/content/proper/commons-text/</url>
-    </site>
-  </distributionManagement>
-
   <profiles>
     <profile>
-	  <!-- Java 11 and up -->
       <id>java-11-up</id>
       <activation>
-		<jdk>[11,)</jdk>
-	  </activation>
+        <jdk>[11,)</jdk>
+      </activation>
       <properties>
         <graalvm.version>22.3.5</graalvm.version>
       </properties>
@@ -484,28 +415,27 @@
       <build>
         <plugins>
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-antrun-plugin</artifactId>
             <executions>
               <execution>
                 <id>prepare-checkout</id>
+                <phase>pre-site</phase>
                 <goals>
                   <goal>run</goal>
                 </goals>
-                <phase>pre-site</phase>
                 <configuration>
                   <target>
                     <exec executable="svn">
-                      <arg line="checkout --depth immediates ${commons.scmPubUrl} ${commons.scmPubCheckoutDirectory}"/>
+                      <arg line="checkout --depth immediates ${commons.scmPubUrl} ${commons.scmPubCheckoutDirectory}" />
                     </exec>
                     <exec executable="svn">
-                      <arg line="update --set-depth exclude ${commons.scmPubCheckoutDirectory}/javadocs"/>
+                      <arg line="update --set-depth exclude ${commons.scmPubCheckoutDirectory}/javadocs" />
                     </exec>
-                    <pathconvert pathsep=" " property="dirs">
-                      <dirset dir="${commons.scmPubCheckoutDirectory}" includes="*"/>
+                    <pathconvert property="dirs" pathsep=" ">
+                      <dirset dir="${commons.scmPubCheckoutDirectory}" includes="*" />
                     </pathconvert>
                     <exec executable="svn">
-                      <arg line="update --set-depth infinity ${dirs}"/>
+                      <arg line="update --set-depth infinity ${dirs}" />
                     </exec>
                   </target>
                 </configuration>
@@ -517,10 +447,6 @@
     </profile>
     <profile>
       <id>benchmark</id>
-      <properties>
-        <skipTests>true</skipTests>
-        <benchmark>org.apache</benchmark>
-      </properties>
       <build>
         <plugins>
           <plugin>
@@ -539,7 +465,7 @@
                   <executable>java</executable>
                   <arguments>
                     <argument>-classpath</argument>
-                    <classpath/>
+                    <classpath />
                     <argument>org.openjdk.jmh.Main</argument>
                     <argument>-rf</argument>
                     <argument>json</argument>
@@ -553,6 +479,10 @@
           </plugin>
         </plugins>
       </build>
+      <properties>
+        <skipTests>true</skipTests>
+        <benchmark>org.apache</benchmark>
+      </properties>
     </profile>
   </profiles>
 </project>
