@@ -121,7 +121,7 @@
     <commons.jira.id>TEXT</commons.jira.id>
     <commons.scmPubCheckoutDirectory>site-content</commons.scmPubCheckoutDirectory>
     <commons.jacoco.methodRatio>0.98</commons.jacoco.methodRatio>
-    <commons.mockito.version>4.11.0</commons.mockito.version>
+    <commons.mockito.version>5.2.0</commons.mockito.version>
     <commons.jacoco.branchRatio>0.95</commons.jacoco.branchRatio>
     <commons.jacoco.classRatio>1.00</commons.jacoco.classRatio>
     <commons.jacoco.instructionRatio>0.97</commons.jacoco.instructionRatio>
