@@ -136,7 +136,7 @@
     <commons.rng.version>1.5</commons.rng.version>
     <commons.jira.pid>12318221</commons.jira.pid>
     <commons.distSvnStagingUrl>scm:svn:https://dist.apache.org/repos/dist/dev/commons/${commons.componentid}</commons.distSvnStagingUrl>
-    <commons.bytebuddy.version>1.14.13</commons.bytebuddy.version>
+    <commons.bytebuddy.version>1.14.16</commons.bytebuddy.version>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <commons.rc.version>RC1</commons.rc.version>
     <maven.compiler.target>1.8</maven.compiler.target>
